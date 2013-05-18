@@ -1,6 +1,6 @@
-Ext.define('OzShorebirdsV2.view.Main', {
+Ext.define('OzShorebirdsV2.view.Initial', {
     extend: 'Ext.TabPanel',
-	xtype: 'mainpanel',
+	xtype: 'initialcard',
     requires: [
         'OzShorebirdsV2.view.Browse',
         'OzShorebirdsV2.view.Search',

@@ -1,15 +1,25 @@
 Ext.define('OzShorebirdsV2.model.Species', {
     extend: 'Ext.data.Model',
     config: {
-        fields: ['firstName', 'middleInitial', 'lastName']
+		fields: [
+			'speciesCommon',
+			'speciesFirst',
+			'speciesLast',
+			'speciesScientific',
+			'speciesImage',
+			'speciesHabitat',
+			'speciesStatus',
+			'speciesTip',
+			'speciesInflight',
+			'speciesSize'
+		]
     },
            
-    fullName: function() {
+    speciesName: function() {
         var d = this.data,
         names = [
-            d.firstName,
-            (!d.middleInitial ? "" : d.middleInitial + "."),
-            d.lastName
+            (!d.speciesFirst ? "" : d.speciesFirst),
+            d.speciesLast
         ];
         return names.join(" ");
     }
